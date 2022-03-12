@@ -1,11 +1,11 @@
-export default function Story(props) {
+export default function Story({ imgUrl, nomeUsuario }) {
     return (
         <div class="story">
             <div class="imagem">
-                <img src={props.imgUrl} />
+                <img src={imgUrl} />
             </div>
             <div class="usuario">
-                {props.nomeUsuario}
+                {nomeUsuario}
             </div>
         </div>
     )
