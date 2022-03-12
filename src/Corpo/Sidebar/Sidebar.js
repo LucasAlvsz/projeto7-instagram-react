@@ -1,15 +1,17 @@
 import Sugestoes from "./Sugestoes/Sugestoes"
+import Usuario from "./Usuario/Usuario"
+
 export default function Sidebar() {
+    const usuario = {
+        userImgUrl: "assets/img/catanacomics.svg",
+        nomeUsuario: "catanacomics",
+        apelidoUsuario: "Catana"
+    }
+    const { userImgUrl, nomeUsuario, apelidoUsuario } = usuario
     return (
         <div class="sidebar">
-            <div class="usuario">
-                <img src="assets/img/catanacomics.svg" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
 
+            <Usuario userImgUrl={userImgUrl} nomeUsuario={nomeUsuario} apelidoUsuario={apelidoUsuario} />
             <Sugestoes />
 
             <div class="links">
