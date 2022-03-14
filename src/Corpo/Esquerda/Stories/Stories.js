@@ -1,4 +1,5 @@
 import Story from "./Story"
+import Setinha from "./Setinha"
 export default function Stories() {
     const story = [{
         imgUrl: "assets/img/9gag.svg",
@@ -29,10 +30,7 @@ export default function Stories() {
     return (
         <div class="stories">
             {story.map(story => <Story imgUrl={story.imgUrl} nomeUsuario={story.nomeUsuario} />)}
-
-            <div class="setinha">
-                <ion-icon name="chevron-forward-circle"></ion-icon>
-            </div>
+            <Setinha />
         </div>
     )
 }

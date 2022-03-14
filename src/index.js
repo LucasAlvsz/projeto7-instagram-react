@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
-import Navbar from './Navbar'
+import Navbar from './Navbar/Navbar'
 import Corpo from './Corpo/Corpo'
-import Mobile from './Mobile'
+import Mobile from './Mobile/Mobile'
 
 function App() {
     return (

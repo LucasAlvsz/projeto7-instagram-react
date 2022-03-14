@@ -1,4 +1,4 @@
-import Post from "./Post"
+import Post from "./Post/Post"
 export default function Posts() {
     const post = [{
         usuario: {
@@ -26,7 +26,19 @@ export default function Posts() {
     ]
     return (
         <div class="posts">
-            {post.map(post => <Post imgUserUrl={post.usuario.imgUserUrl} nomeUsuario={post.usuario.nomeUsuario} conteudo={post.conteudo} curtidasImgUser={post.curtidas.curtidasImgUser} curtidasNomeUsuario={post.curtidas.curtidasNomeUsuario} curtidasNum={post.curtidas.curtidasNum} />)}
+            {post.map(post => {
+                return (
+                    <Post
+                        imgUserUrl={post.usuario.imgUserUrl}
+                        nomeUsuario={post.usuario.nomeUsuario}
+                        srcConteudo={post.conteudo}
+                        curtidasImgUser={post.curtidas.curtidasImgUser}
+                        curtidasNomeUsuario={post.curtidas.curtidasNomeUsuario}
+                        curtidasNum={post.curtidas.curtidasNum}
+                    />
+                )
+            })
+            }
         </div>
     )
 }

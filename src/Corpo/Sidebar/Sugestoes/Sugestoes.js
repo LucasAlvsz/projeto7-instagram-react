@@ -1,4 +1,5 @@
 import Sugestao from "./Sugestao"
+import Titulo from "./Titulo"
 export default function Sugestoes() {
     const sugestao = [{
         usuario: {
@@ -32,14 +33,18 @@ export default function Sugestoes() {
         }
     }]
     return (
-        < div class="sugestoes" >
-            <div class="titulo">
-                Sugestões para você
-                <div>Ver tudo</div>
-            </div>
-
-            {sugestao.map(sugestao => <Sugestao imgUserUrl={sugestao.usuario.imgUserUrl} nomeUsuario={sugestao.usuario.nomeUsuario} statusUsuario={sugestao.usuario.statusUsuario} />)}
-
+        <div class="sugestoes">
+            <Titulo />
+            {sugestao.map(sugestao => {
+                return (
+                    <Sugestao
+                        imgUserUrl={sugestao.usuario.imgUserUrl}
+                        nomeUsuario={sugestao.usuario.nomeUsuario}
+                        statusUsuario={sugestao.usuario.statusUsuario}
+                    />
+                )
+            })
+            }
         </div >
     )
 }
