@@ -1,11 +1,12 @@
 import Acoes from "./Acoes"
+import Usuario from "./Usuario"
 export default function Topo({ imgUserUrl, nomeUsuario }) {
     return (
         <div class="topo">
-            <div class="usuario">
-                <img src={imgUserUrl} />
-                {nomeUsuario}
-            </div>
+            <Usuario
+                imgUserUrl={imgUserUrl}
+                nomeUsuario={nomeUsuario}
+            />
             <Acoes />
         </div>
     )

@@ -1,6 +1,7 @@
 import Sugestoes from "./Sugestoes/Sugestoes"
 import Usuario from "./Usuario/Usuario"
-
+import Links from "./Links"
+import Copyright from "./Copyright"
 export default function Sidebar() {
     const usuario = {
         userImgUrl: "assets/img/catanacomics.svg",
@@ -10,18 +11,10 @@ export default function Sidebar() {
     const { userImgUrl, nomeUsuario, apelidoUsuario } = usuario
     return (
         <div class="sidebar">
-
             <Usuario userImgUrl={userImgUrl} nomeUsuario={nomeUsuario} apelidoUsuario={apelidoUsuario} />
             <Sugestoes />
-
-            <div class="links">
-                Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
-                Hashtags • Idioma
-            </div>
-
-            <div class="copyright">
-                © 2021 INSTAGRAM DO FACEBOOK
-            </div>
+            <Links />
+            <Copyright />
         </div>
     )
 }

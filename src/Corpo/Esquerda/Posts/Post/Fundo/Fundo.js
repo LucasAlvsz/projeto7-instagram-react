@@ -1,16 +1,14 @@
 import Acoes from "./Acoes"
-
+import Curtidas from "./Curtidas"
 export default function Fundo({ curtidasImgUser, curtidasNomeUsuario, curtidasNum }) {
     return (
         <div class="fundo">
             <Acoes />
-            <div class="curtidas">
-                <img src={curtidasImgUser} />
-                <div class="texto">
-                    Curtido por <strong>{curtidasNomeUsuario}</strong> e <strong>outras {curtidasNum} pessoas</strong>
-                </div>
-            </div>
-
+            <Curtidas
+                curtidasImgUser={curtidasImgUser}
+                curtidasNomeUsuario={curtidasNomeUsuario}
+                curtidasNum={curtidasNum}
+            />
         </div>
     )
 }
