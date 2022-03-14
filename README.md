@@ -1,6 +1,6 @@
 Sétimo projeto Driven - Bate-Papo UOL
 
-Pages: "soon"
+Pages: "https://lucasalvsz.github.io/projeto7-instagram-react/"
 
 # Getting Started with Create React App
 
